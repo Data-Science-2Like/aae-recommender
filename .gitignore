@@ -111,3 +111,12 @@ results/*
 # vim swp files
 *.swp
 
+/aminer
+/aaerec/Scripts
+/.idea
+/activate/Scripts
+/vectors
+/temp
+/aaerec/pyvenv.cfg
+/activate/pyvenv.cfg
+/*.pycharmrc

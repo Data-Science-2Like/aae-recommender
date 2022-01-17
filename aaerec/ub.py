@@ -49,7 +49,7 @@ class EmbeddedVectorizer(TfidfVectorizer):
         index2word: list of words with indices matching V
         """
         self.embedding = embedding
-        super(EmbeddedVectorizer, self).__init__(self, vocabulary=index2word,
+        super(EmbeddedVectorizer, self).__init__(vocabulary=index2word,
                                                  **kwargs)
 
     def fit(self, raw_documents, y=None):
