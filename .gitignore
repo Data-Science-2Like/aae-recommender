@@ -120,3 +120,4 @@ results/*
 /aaerec/pyvenv.cfg
 /activate/pyvenv.cfg
 /*.pycharmrc
+/output

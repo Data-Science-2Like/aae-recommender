@@ -77,7 +77,7 @@ def load_dblp(path):
 
 def load_acm(path):
     """ Loads a single file """
-    with open(path, 'r') as fhandle:
+    with open(path, 'r', encoding="utf8") as fhandle:
         obj = []
         paper = {}
         paper["references"] = []
