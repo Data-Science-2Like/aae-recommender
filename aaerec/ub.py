@@ -1,3 +1,4 @@
+
 """ UB General Purpose Library """
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -56,8 +57,7 @@ class EmbeddedVectorizer(TfidfVectorizer):
         return self
 
     def transform(self, raw_documents, __y=None):
-        sparse_scores = super(EmbeddedVectorizer,
-                              self).transform(raw_documents)
+        sparse_scores = super(EmbeddedVectorizer, self).transform(raw_documents)
         # Xt is sparse counts
         return sparse_scores @ self.embedding
 
@@ -80,7 +80,8 @@ class GensimEmbeddedVectorizer(EmbeddedVectorizer):
         ---------
         `gensim_vectors` is expected to have index2word and syn0 defined
         """
-        index2word = gensim_vectors.index2word
+        # index2word = gensim_vectors.index2word
+        index2word = gensim_vectors.index_to_key
         embedding = gensim_vectors.vectors
         super(GensimEmbeddedVectorizer, self).__init__(embedding,
                                                        index2word,
